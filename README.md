@@ -4,4 +4,4 @@ Natours is a tours agency website developed using andvanced SASS/CSS, HTML and a
 
 ## Image
 
-![Natours](https://repository-images.githubusercontent.com/237649934/05213d80-4531-11ea-9df6-d2bc4eaabb47)
+![Natours](https://repository-images.githubusercontent.com/238275097/cd1a3480-4794-11ea-8db6-b4a453173ae3)
