@@ -1,26 +1,23 @@
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: $default-font-size;
+  font-size: 16px;
   line-height: 1.7;
   color: $color-grey-dark;
 }
 
 .heading-primary {
-  color: $color-white;
   text-transform: uppercase;
+  color: $color-white;
   backface-visibility: hidden;
-  margin-bottom: 6rem;
-  text-align: center;
+  margin-bottom: 60px;
 
   &--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation: moveInLeft 1s ease-out;
 
     @include respond(phone) {
       letter-spacing: 1rem;
@@ -32,7 +29,7 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.75rem;
+    letter-spacing: 1.74rem;
     animation: moveInRight 1s ease-out;
 
     @include respond(phone) {
@@ -43,8 +40,8 @@ body {
 
 .heading-secondary {
   font-size: 3.5rem;
-  text-transform: uppercase;
   font-weight: 700;
+  text-transform: uppercase;
   background-image: linear-gradient(
     to right,
     $color-primary-light,
@@ -54,8 +51,8 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: 2px;
   transition: all 0.2s;
+  letter-spacing: 0.2rem;
 
   @include respond(tab-port) {
     font-size: 3rem;

@@ -1,10 +1,10 @@
 .feature-box {
-  background-color: rgba($color-white, 0.8);
+  background-color: rgba($color: $color-white, $alpha: 0.8);
   font-size: 1.5rem;
-  text-align: center;
   padding: 2.5rem;
+  text-align: center;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
   transition: transform 0.3s;
 
   @include respond(tab-port) {
@@ -20,12 +20,12 @@
       $color-primary-dark
     );
     display: inline-block;
-    background-clip: text;
-    -webkit-background-clip: text;
     color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 
     @include respond(tab-port) {
-      margin-bottom: 0;
+      padding: 0rem;
     }
   }
 

@@ -14,15 +14,16 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
     overflow: hidden;
 
     &--front {
       background-color: $color-white;
+      position: relative;
     }
 
     &--back {
-      transform: rotateY(180deg);
+      transform: rotateY(-180deg);
 
       &-1 {
         background-image: linear-gradient(
@@ -55,17 +56,16 @@
   }
 
   &:hover &__side--back {
-    transform: rotateY(0);
+    transform: rotateY(-360deg);
   }
 
+  // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
     height: 23rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
 
     &--1 {
       background-image: linear-gradient(
@@ -91,7 +91,7 @@
           $color-tertiary-light,
           $color-tertiary-dark
         ),
-        url(../img/nat-7.jpg);
+        url(../img/nat-6.jpg);
     }
   }
 
@@ -101,9 +101,9 @@
     text-transform: uppercase;
     color: $color-white;
     position: absolute;
-    text-align: right;
     top: 12rem;
     right: 2rem;
+    text-align: right;
     width: 75%;
   }
 
@@ -140,18 +140,18 @@
   &__details {
     padding: 3rem;
 
-    & ul {
+    ul {
       list-style: none;
       width: 80%;
       margin: 0 auto;
 
-      & li {
+      li {
         text-align: center;
         font-size: 1.5rem;
         padding: 1rem;
 
         &:not(:last-child) {
-          border-bottom: 1px solid $color-grey-light-2;
+          border-bottom: 1px solid $color-grey-light2;
         }
       }
     }
@@ -162,7 +162,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 90%;
     text-align: center;
   }
 
@@ -182,23 +182,19 @@
     font-weight: 100;
   }
 
-  // @include respond(tab-port) {
-  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+  @media only screen and (max-width: 56.25em) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: 0.15);
 
     &__side {
       height: auto;
-      transition: all 0.8s ease;
       position: relative;
-      overflow: hidden;
       box-shadow: none;
 
       &--back {
-        transform: rotateY(0);
-
+        transform: translateY(0);
         -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
         clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
       }
@@ -216,8 +212,9 @@
       position: relative;
       top: 0;
       left: 0;
-      transform: translate(0);
-      padding: 7rem 4rem 4rem;
+      transform: translate(0, 0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
     }
 
     &__price-box {
